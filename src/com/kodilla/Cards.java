@@ -9,6 +9,7 @@ public class Cards {
     private ArrayList<Card> cardsList = new ArrayList<>();
     private FlowPane cards = new FlowPane(Orientation.VERTICAL);
     private boolean croupierCards;
+    private int valueOfCards;
 
     public Cards(boolean croupierCards) {
         this.croupierCards = croupierCards;
@@ -17,6 +18,7 @@ public class Cards {
     public void addCard(Card card) {
         cardsList.add(card);
         cards.getChildren().add(card.getCardImageView());
+        valueOfCards += card.getCardValue();
     }
 
     public ArrayList<Card> getCardsList() {
@@ -32,10 +34,6 @@ public class Cards {
     }
 
     public int getValueOfCards() {
-        int valueOfCards = 0;
-        for (Card card: cardsList) {
-            valueOfCards =+ card.getCardValue();
-        }
         return valueOfCards;
     }
 }
