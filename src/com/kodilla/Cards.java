@@ -36,4 +36,10 @@ public class Cards {
     public int getValueOfCards() {
         return valueOfCards;
     }
+
+    public void resetCards() {
+        cardsList.clear();
+        cards.getChildren().clear();
+        valueOfCards = 0;
+    }
 }

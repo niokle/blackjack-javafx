@@ -11,9 +11,6 @@ public class Card {
     private ImageView cardImageView;
 
     public Card(String cardColor, String cardRank) {
-        double cardImageViewNewHeight;
-        double cardImageViewNewWidth;
-
         this.cardColor = cardColor;
         this.cardRank = cardRank;
 
